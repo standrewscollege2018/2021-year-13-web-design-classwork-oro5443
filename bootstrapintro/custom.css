@@ -1,0 +1,9 @@
+.bg-darkblue {
+  background-color: blue;
+}
+
+@media screen and (max-width: 800px) {
+  .display-3 {
+    font-size: 60px;
+  }
+}
