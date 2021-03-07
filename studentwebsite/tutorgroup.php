@@ -8,7 +8,7 @@ if(!isset($_GET['tutorgroupID'])) {
   $tutor_qry = mysqli_query($dbconnect, $tutor_sql);
 
   if(mysqli_num_rows($tutor_qry)==0) {
-    echo "<p>No students in $tutorcode</p>";
+    echo "<h1>No students in $tutorcode</h1>";
   } else {
     $tutor_aa = mysqli_fetch_assoc($tutor_qry);
     echo "<h1>$tutorcode</h1>";

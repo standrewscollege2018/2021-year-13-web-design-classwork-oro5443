@@ -1,0 +1,30 @@
+<script>
+function myFunction() {
+  var txt;
+  var r = confirm("Are You Sure You Want To Delete <?php echo "$firstname" ?>?");
+  if (r == true) {
+    alert("Student Has Been Deleted");
+    <?php
+     echo
+     ?>
+    location.replace("index.php?page=displaydelete");
+  } else if (r == false) {
+    alert("Deletion Cancelled");
+    location.replace("index.php?page=displaydelete");
+  }
+}
+</script>
+
+
+<script>
+function myFunction() {
+  var txt;
+  var r = confirm("Press a button!");
+  if (r == true) {
+    txt = "<?php echo '$firstname'; ?>";
+  } else if (r == false) {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>

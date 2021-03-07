@@ -25,25 +25,22 @@ $tutor_aa = mysqli_fetch_assoc($tutor_qry);
      </div>
      <div class="navbar4">
        <div class="dropdown">
-         <button class="dropbtn">Dropdown
+         <button class="dropbtn">Tutor Groups
            <i class="fa fa-caret-down"></i>
          </button>
          <div class="dropdown-content">
-           <a href="#">Link 1</a>
-           <a href="#">Link 2</a>
-           <a href="#">Link 3</a>
+           <?php
+             do {
+               $tutorgroupID = $tutor_aa['tutorgroupID'];
+               $tutorcode = $tutor_aa['tutorcode'];
+
+               echo "<a href='index.php?page=tutorgroup&tutorgroupID=$tutorgroupID&tutorcode=$tutorcode'>$tutorcode</a>";
+
+              } while ($tutor_aa = mysqli_fetch_assoc($tutor_qry))
+           ?>
          </div>
        </div>
      </div>
      <!--contains each of the boxes in the navbar, each with different contents -->
    </div>
  </div>
- <?php
-   do {
-     $tutorgroupID = $tutor_aa['tutorgroupID'];
-     $tutorcode = $tutor_aa['tutorcode'];
-
-     echo "<a href='index.php?page=tutorgroup&tutorgroupID=$tutorgroupID&tutorcode=$tutorcode'>$tutorcode</a>";
-
-    } while ($tutor_aa = mysqli_fetch_assoc($tutor_qry))
- ?>

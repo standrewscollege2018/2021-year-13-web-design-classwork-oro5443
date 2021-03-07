@@ -13,7 +13,10 @@
     <div class="row">
   <?php
   if(mysqli_num_rows($result_qry)==0) {
-      echo "<h1>No results found</h1>";
+      echo "
+      <div class='alert alert-primary' role='alert'>
+      No Results Match This Search
+      </div>";
     } else {
       $result_aa = mysqli_fetch_assoc($result_qry);
 

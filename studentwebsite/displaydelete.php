@@ -17,13 +17,13 @@
         $firstname = $result_aa['firstname'];
         $lastname = $result_aa['lastname'];
         $photo = $result_aa['photo'];
-        $studentID = $result_aa['studentID']
-        ?>
-            <div class="col-lg-4 col-md-4 bg-danger">
-              <a href="index.php?page=deletestudent&sudentID=$studentID"><img src="images/<?php echo $photo; ?>" class="img-fluid" alt=""></a>
-              <p><?php echo "$firstname $lastname"; ?></p>
-            </div>
-      <?php
+        $studentID = $result_aa['studentID'];
+        
+        echo "<div class='col-lg-4 col-md-4 bg-danger'>
+          <a href='index.php?page=deletestudent&studentID=$studentID'><img src='images/$photo' class='img-fluid' alt=''></a>
+          <p>$firstname $lastname</p>
+        </div>";
+
         } while ($result_aa = mysqli_fetch_assoc($result_qry));
 
 
